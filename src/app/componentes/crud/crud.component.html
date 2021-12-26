@@ -1,0 +1,22 @@
+<h2>Consulta: </h2>
+<form>
+    <input type='number' class="form-control" name='codigo' placeholder="codigo" id="codigo" [(ngModel)]= "codigo"/>
+    <button type="button" (click)="searchCodigo()">Consultar</button>
+</form>
+<tr *ngFor="let i of buscaCod">
+    <td>{{i.codigo}}</td>
+    <td>{{i.instituicao}}</td>
+</tr>
+<hr>
+
+<h2>Bancos Cadastrados: </h2>
+<table>
+    <tr>
+        <th>Codigo</th>
+        <th>Instituicao</th>
+    </tr>
+    <tr *ngFor = "let i of bancos">
+        <td>{{i.codigo}}</td>
+        <td>{{i.instituicao}}</td> 
+    </tr>
+</table>
